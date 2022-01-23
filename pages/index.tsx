@@ -9,6 +9,9 @@ import GNB from "../components/GNB";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import Education from "../containers/Education";
+import Specialized from "../containers/Specialized";
+
 import oc from "open-color";
 
 const Container = styled.div`
@@ -40,94 +43,21 @@ const Main = styled.main`
   width: 800px;
 `;
 
-const Button = styled.button`
-  border: 1px solid ${oc.black};
+const Button = styled.a`
+  border: 2px solid ${oc.gray[4]};
+  color: ${oc.gray[4]};
   background: none;
   padding: 8px 16px;
   border-radius: 4px;
   margin-top: 3rem;
   font-size: 1rem;
   font-weight: 600;
-`;
+  transition: 0.3s;
 
-const GridChild = styled.div<{ $bg?: string }>`
-  background: ${(props) => props.$bg || "None"};
-  height: 300px;
-  border-radius: 24px;
-  padding: 50px;
-`;
-
-const Education = styled.div`
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1rem;
-  row-gap: 1rem;
-
-  & > ${GridChild}:nth-child(1) {
-    grid-column: 1 / 3;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    .container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .left {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .right {
-      flex: 2;
-
-      & > span {
-        font-weight: 600;
-        color: ${oc.gray[6]};
-      }
-
-      & > h1 {
-        margin-top: 0;
-        font-weight: 900;
-        color: ${oc.gray[8]};
-        margin-bottom: 10px;
-      }
-
-      .period {
-        color: ${oc.gray[7]};
-      }
-    }
-  }
-
-  & > ${GridChild}:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: ${oc.white};
-    text-align: center;
-
-    & > h1 {
-      margin-top: 8px;
-      font-weight: 900;
-    }
-  }
-
-  & > ${GridChild}:nth-child(3) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-    & > h1 {
-      margin-top: 8px;
-      font-weight: 900;
-    }
+  &:hover {
+    border: 2px solid ${oc.black};
+    color: ${oc.black};
+    transition: 0.3s;
   }
 `;
 
@@ -139,54 +69,17 @@ const Home: NextPage = () => {
       <Banner>
         <h1>Artistic programmer</h1>
         <h2>both develop & design.</h2>
-        <Button>Download CV</Button>
+        <Button
+          href="https://nayunhwan.github.io/whoami/cv/Yunhwan_Na_CV.pdf"
+          target="_blank"
+        >
+          Download CV
+        </Button>
       </Banner>
       <Container>
         <Main>
-          <Education>
-            <GridChild $bg={oc.gray[0]}>
-              <div className="container">
-                <div className="left">
-                  <Image
-                    src="/hyu.png"
-                    alt="Vercel Logo"
-                    width="128"
-                    height="128"
-                  />
-                </div>
-                <div className="right">
-                  <span>Studied at</span>
-                  <h1>
-                    Hanyang University
-                    <br />
-                    ERICA
-                  </h1>
-                  <div className="period">Mar, 2014 - Apr, 2021</div>
-                </div>
-              </div>
-            </GridChild>
-            <GridChild $bg={oc.gray[9]}>
-              <div>Bachelor of Science</div>
-              <h1>
-                Computer
-                <br />
-                Science
-              </h1>
-              <span>
-                1st major <br />
-                <b>GPA 4.12</b>
-              </span>
-            </GridChild>
-            <GridChild $bg={oc.orange[0]}>
-              <div>Bachelor of Science</div>
-              <h1>Design Engineering</h1>
-              <span>
-                2nd major
-                <br />
-                <b>GPA 3.86</b>
-              </span>
-            </GridChild>
-          </Education>
+          <Education />
+          <Specialized />
         </Main>
       </Container>
       <main className={styles.main}>
