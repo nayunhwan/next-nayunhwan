@@ -7,11 +7,21 @@ import REACT from "../../public/react.png";
 import REDUX from "../../public/redux.png";
 import TS from "../../public/ts.svg";
 import SCSS from "../../public/scss.png";
+import JEST from "../../public/jest.png";
+import STYLED from "../../public/styled-components.png";
 
 const items = [
   { key: "react", src: REACT, alt: "react", width: 50, height: 50 },
   { key: "ts", src: TS, alt: "TypeScript", width: 48, height: 48 },
   { key: "redux", src: REDUX, alt: "redux", width: 48, height: 48 },
+  { key: "jest", src: JEST, alt: "jest", width: 48, height: 48 },
+  {
+    key: "styled",
+    src: STYLED,
+    alt: "styled-components",
+    width: 48,
+    height: 48,
+  },
   { key: "scss", src: SCSS, alt: "Scss", width: 64, height: 48 },
 ];
 

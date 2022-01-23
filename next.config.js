@@ -4,7 +4,10 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     loader: "imgix",
-    path: "https://nayunhwan.github.io/",
+    path:
+      process.env.NODE_ENV === "dev"
+        ? "http://localhost:3000"
+        : "https://nayunhwan.github.io/",
   },
 };
 
