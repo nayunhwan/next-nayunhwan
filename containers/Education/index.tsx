@@ -2,6 +2,8 @@ import Image from "next/image";
 import styled from "styled-components";
 import oc from "open-color";
 
+import HYU from "../../public/hyu.png";
+
 const GridChild = styled.div<{ $bg?: string }>`
   background: ${(props) => props.$bg || "None"};
   height: 300px;
@@ -90,7 +92,7 @@ const Education = () => {
         <div className="container">
           <div className="left">
             <Image
-              src="/hyu.png"
+              src={HYU}
               alt="Hanyang University Logo"
               width="128"
               height="128"

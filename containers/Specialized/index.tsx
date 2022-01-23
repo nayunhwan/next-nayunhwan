@@ -1,11 +1,12 @@
 import Image from "next/image";
 import styled from "styled-components";
+
 import oc from "open-color";
 
-const REACT = "/react.png";
-const REDUX = "/redux.png";
-const TS = "/ts.svg";
-const SCSS = "/scss.png";
+import REACT from "../../public/react.png";
+import REDUX from "../../public/redux.png";
+import TS from "../../public/ts.svg";
+import SCSS from "../../public/scss.png";
 
 const items = [
   { key: "react", src: REACT, alt: "react", width: 50, height: 50 },
