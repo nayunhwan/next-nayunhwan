@@ -13,8 +13,17 @@ const Container = styled.div`
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
   & > ${GridChild}:nth-child(1) {
     grid-column: 1 / 3;
+
+    @media (max-width: 600px) {
+      grid-column: 1;
+    }
+
     display: flex;
     justify-content: center;
     flex-direction: column;

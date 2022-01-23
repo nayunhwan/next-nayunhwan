@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 
 import styled from "styled-components";
 
@@ -13,6 +13,10 @@ import Specialized from "../containers/Specialized";
 import Banner from "../containers/Banner";
 import Work from "../containers/Work";
 
+const Root = styled.div`
+  padding: 0 2rem;
+`;
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -20,14 +24,18 @@ const Container = styled.div`
 
 const Main = styled.main`
   width: 800px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    // <div className={styles.container}>
+    <Root>
       <Header />
       <GNB />
-
       <Banner />
       <Container>
         <Main>
@@ -37,19 +45,7 @@ const Home: NextPage = () => {
         </Main>
       </Container>
       <Footer />
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
-    </div>
+    </Root>
   );
 };
 

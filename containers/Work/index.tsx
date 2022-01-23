@@ -11,12 +11,20 @@ const Container = styled.div`
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
   & > ${GridChild}:nth-child(1) {
     grid-column: 1 / 3;
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: ${oc.white};
+
+    @media (max-width: 600px) {
+      grid-column: 1;
+    }
 
     & > h1 {
       font-weight: 900;
@@ -55,6 +63,10 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
     color: ${oc.white};
+
+    @media (max-width: 600px) {
+      grid-column: 1;
+    }
   }
 
   & > .vingle {
@@ -90,6 +102,10 @@ const FEConfChild = styled.a`
   background-size: cover;
   background-position-y: center;
   border-radius: 36px;
+
+  @media (max-width: 600px) {
+    grid-column: 1;
+  }
 `;
 
 const Work = () => {
@@ -105,7 +121,9 @@ const Work = () => {
         <div className="jobTitle">Front-End Engineer</div>
       </GridChild>
       <GridChild $bg={oc.gray[0]}>
-        <Image src="/unicorn.png" width={150} height={150} />
+        <div>
+          <Image src="/unicorn.png" width={150} height={150} />
+        </div>
         <h1 className="description">
           <b>Unicorn</b>
           <br />

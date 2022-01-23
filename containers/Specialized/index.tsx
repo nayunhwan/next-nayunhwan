@@ -38,13 +38,20 @@ const Container = styled.div`
 `;
 
 const ItemList = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 const Item = styled.div`
-  & + & {
-    margin-left: 32px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Specialized = () => {

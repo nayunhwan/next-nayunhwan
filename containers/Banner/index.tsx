@@ -57,6 +57,10 @@ const ChatBubble = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   border-radius: 8px;
   padding: 1rem 1rem;
+
+  @media (max-width: 600px) {
+    position: initial;
+  }
 `;
 
 const Banner = () => {

@@ -11,6 +11,10 @@ const GridChild = styled.div<{ $bg?: string }>`
     transition: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 20px 30px;
   }
+
+  @media (max-width: 600px) {
+    height: fit-content;
+  }
 `;
 
 export default GridChild;
