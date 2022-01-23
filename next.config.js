@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     loader: "imgix",
-    path: "https://test.io",
+    path: "https://nayunhwan.github.io/",
   },
 };
 
