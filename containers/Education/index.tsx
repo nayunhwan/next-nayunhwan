@@ -2,14 +2,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import oc from "open-color";
 
-import HYU from "../../public/hyu.png";
+import GridChild from "../../components/GridChild";
 
-const GridChild = styled.div<{ $bg?: string }>`
-  background: ${(props) => props.$bg || "None"};
-  height: 300px;
-  border-radius: 24px;
-  padding: 50px;
-`;
+import HYU from "../../public/hyu.png";
 
 const Container = styled.div`
   display: grid;

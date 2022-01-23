@@ -31,7 +31,7 @@ const Button = styled.a`
   padding: 8px 16px;
   border-radius: 4px;
   margin-top: 3rem;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
   transition: 0.3s;
 
@@ -64,7 +64,7 @@ const Banner = () => {
     <Container>
       <CharacterContainer>
         <Image src="/yunhwan_head.png" alt="yunhwa3" width={300} height={300} />
-        <ChatBubble>Hi, I'm Yunhwan</ChatBubble>
+        <ChatBubble>{"Hi, I'm Yunhwan"}</ChatBubble>
       </CharacterContainer>
 
       <h1>Artistic programmer</h1>

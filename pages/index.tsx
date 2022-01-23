@@ -10,8 +10,8 @@ import Footer from "../components/Footer";
 
 import Education from "../containers/Education";
 import Specialized from "../containers/Specialized";
-
 import Banner from "../containers/Banner";
+import Work from "../containers/Work";
 
 const Container = styled.div`
   display: flex;
@@ -33,6 +33,7 @@ const Home: NextPage = () => {
         <Main>
           <Education />
           <Specialized />
+          <Work />
         </Main>
       </Container>
       <Footer />

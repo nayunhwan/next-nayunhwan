@@ -3,35 +3,66 @@ import styled from "styled-components";
 
 import oc from "open-color";
 
+import Logo from "../../components/Logo";
+
 const Container = styled.div`
   display: flex;
   align-items: center;
   background: ${oc.white};
   height: 60px;
+  justify-content: space-between;
 `;
 
-const Logo = styled.div`
-  width: 32px;
-  height: 32px;
-  background: ${oc.black};
-  color: ${oc.white};
-  border-radius: 4px;
+const Right = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-right: 8px;
-  font-weight: 600;
+  align-items: center;
+  font-size: 24px;
+
+  li + li {
+    margin-left: 12px;
+  }
 `;
 
-const Typo = styled.div`
-  font-weight: 600;
-`;
+const items = [
+  {
+    icon: "xi-x xi-facebook",
+    key: "facebook",
+    href: "https://facebook.com/nayunhwan",
+  },
+  {
+    icon: "xi-x xi-instagram",
+    key: "instagram",
+    href: "https://instagram.com/nayunhwan",
+  },
+  {
+    icon: "xi-x xi-github",
+    key: "github",
+    href: "https://github.com/nayunhwan",
+  },
+  {
+    icon: "xi-x xi-linkedin",
+    key: "linkedin",
+    href: "https://linkedin.com/in/nayunhwan",
+  },
+];
 
 const GNB: FC = () => {
   return (
     <Container>
-      <Logo>Na.</Logo>
-      <Typo>nayunhwan</Typo>
+      <Logo />
+      <Right>
+        {items.map((item) => (
+          <li key={item.key}>
+            <a href={item.href}>
+              <i className={item.icon} />
+            </a>
+          </li>
+        ))}
+      </Right>
     </Container>
   );
 };
