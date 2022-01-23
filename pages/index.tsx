@@ -79,7 +79,7 @@ const Home: NextPage = () => {
       <Container>
         <Main>
           <Education />
-          {/* <Specialized /> */}
+          <Specialized />
         </Main>
       </Container>
       <Footer />
