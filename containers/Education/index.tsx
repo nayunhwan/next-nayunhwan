@@ -92,16 +92,16 @@ const Container = styled.div`
 const Education = () => {
   return (
     <Container>
-      <GridChild $bg={oc.gray[0]}>
+      <GridChild $bg={oc.gray[1]}>
         <div className="container">
-          <div className="left">
+          {/* <div className="left">
             <Image
               src={HYU}
               alt="Hanyang University Logo"
               width="128"
               height="128"
             />
-          </div>
+          </div> */}
           <div className="right">
             <span>Studied at</span>
             <h1>

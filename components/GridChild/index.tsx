@@ -9,7 +9,7 @@ const GridChild = styled.div<{ $bg?: string }>`
 
   &:hover {
     transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   }
 
   @media (max-width: 600px) {

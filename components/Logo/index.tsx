@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Symbol = styled.div<{ $color: string }>`
+export const Symbol = styled.div<{ $color: string }>`
   width: 32px;
   height: 32px;
   background: ${(props) => props.$color};
@@ -19,20 +19,26 @@ const Symbol = styled.div<{ $color: string }>`
   justify-content: center;
   margin-right: 12px;
   font-weight: 600;
+  cursor: default;
 `;
 
-const Typo = styled.div<{ $color: string }>`
+export const Typo = styled.div<{ $color: string }>`
   font-weight: 900;
   font-size: 20px;
   letter-spacing: 1px;
   color: ${(props) => props.$color};
+  cursor: default;
 `;
 
 const Logo: FC<{ color?: string }> = ({ color = oc.black }) => {
   return (
     <Container>
-      <Symbol $color={color}>Na.</Symbol>
-      <Typo $color={color}>NAYUNHWAN</Typo>
+      <Symbol className="symbol" $color={color}>
+        Na.
+      </Symbol>
+      <Typo className="typo" $color={color}>
+        NAYUNHWAN
+      </Typo>
     </Container>
   );
 };

@@ -11,16 +11,28 @@ const Container = styled.div`
   width: 100%;
   height: 700px;
 
-  & > h1 {
-    font-size: 52px;
-    font-weight: 900;
-    margin-top: 0;
-    margin-bottom: 0;
+  .textContainer {
+    text-align: center;
+
+    h1 {
+      font-size: 52px;
+      font-weight: 900;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: ${oc.gray[7]};
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      text-align: left;
+    }
   }
 
-  & > h2 {
-    color: ${oc.gray[7]};
-    font-weight: 600;
+  @media (max-width: 600px) {
+    height: 820px;
   }
 `;
 
@@ -28,10 +40,10 @@ const Button = styled.a`
   border: 2px solid ${oc.gray[4]};
   color: ${oc.gray[4]};
   background: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
   margin-top: 3rem;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   transition: 0.3s;
 
@@ -59,7 +71,9 @@ const ChatBubble = styled.div`
   padding: 1rem 1rem;
 
   @media (max-width: 600px) {
-    position: initial;
+    top: -50px;
+    left: 0;
+    right: initial;
   }
 `;
 
@@ -70,9 +84,10 @@ const Banner = () => {
         <Image src="/yunhwan_head.png" alt="yunhwa3" width={300} height={300} />
         <ChatBubble>{"Hi, I'm Yunhwan"}</ChatBubble>
       </CharacterContainer>
-
-      <h1>Artistic programmer</h1>
-      <h2>both develop & design.</h2>
+      <div className="textContainer">
+        <h1>Artistic programmer</h1>
+        <h2>both develop & design.</h2>
+      </div>
       <Button
         href="https://nayunhwan.github.io/whoami/cv/Yunhwan_Na_CV.pdf"
         target="_blank"

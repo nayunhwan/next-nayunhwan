@@ -11,6 +11,12 @@ const Container = styled.div`
   background: ${oc.white};
   height: 60px;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    .typo {
+      display: none;
+    }
+  }
 `;
 
 const Right = styled.ul`
@@ -21,6 +27,13 @@ const Right = styled.ul`
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  color: ${oc.gray[6]};
+  transition: 0.3s;
+
+  li:hover {
+    color: ${oc.black};
+    transition: 0.3s;
+  }
 
   li + li {
     margin-left: 12px;
