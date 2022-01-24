@@ -6,7 +6,7 @@ const Header = () => {
       <title>NAYUNHWAN :: Artistic programmer</title>
       <meta name="description" content="Yunhwan Na Personal page" />
       <link rel="icon" href="/favicon.ico" />
-      <meta property="og:image" content="/og.png" key="ogimage" />
+      <meta property="og:image" content="/og2.png" key="ogimage" />
     </Head>
   );
 };
