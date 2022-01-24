@@ -92,6 +92,13 @@ const Container = styled.div`
   & > .naver {
     color: ${oc.white};
     text-align: center;
+
+    & > h1 {
+      & > b {
+        font-size: 44px;
+        font-weight: 900;
+      }
+    }
   }
 
   & > .short {
@@ -195,7 +202,9 @@ const Work = () => {
         </div>
       </GridChild>
       <GridChild className="naver" $bg="#00D05D">
-        <h1>NAVER HACKDAY</h1>
+        <h1>
+          <b>NAVER</b> HACKDAY
+        </h1>
         <div>
           <b>OUTSTANDING</b>
           <br />
