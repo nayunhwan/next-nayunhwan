@@ -37,8 +37,8 @@ const Container = styled.div`
 `;
 
 const Button = styled.a`
-  border: 2px solid ${oc.gray[4]};
-  color: ${oc.gray[4]};
+  border: 2px solid ${oc.gray[6]};
+  color: ${oc.gray[6]};
   background: none;
   padding: 1rem 1.5rem;
   border-radius: 8px;
