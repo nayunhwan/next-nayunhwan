@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 // import styles from "../styles/Home.module.css";
 
-import styled from "styled-components";
+import styled, { ServerStyleSheet } from "styled-components";
 
 import GNB from "../components/GNB";
 import Header from "../components/Header";
