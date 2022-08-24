@@ -167,11 +167,8 @@ const Work = () => {
           <h1>Sendbird</h1>
           <div className="jobTitle">Front-End Engineer</div>
           <div>
-            Apr, 2019 - Current
-            <div>
-              {`${Math.floor(months / 12)} yrs `}
-              {months % 12 > 0 && `${months % 12} mos`}
-            </div>
+            Apr, 2019 - Jul, 2022
+            <div>3 yrs 4 mos</div>
           </div>
         </div>
       </GridChild>
